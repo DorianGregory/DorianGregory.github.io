@@ -1,0 +1,73 @@
+
+#person {
+    width: 100px;
+    height: 100px;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    position: absolute;
+    left: 500px;
+    top: 150px;
+}
+
+#water {
+    width: 100%;
+    height: 75px;
+    background-color: blue;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+#bowels {
+    width: 103px;
+    height: 0px;
+    border-width: 3px;
+    position: absolute;
+    left: 500px;
+    top: 250px;
+    background-color: green;
+    z-index: -1;
+    animation-name: empty;
+    animation-duration: 20s;
+}
+
+#poop {
+    width: 20px;
+    height: 78px;
+    border-width: 3px;
+    position: absolute;
+    left: 550px;
+    top: 150px;
+    background-color: rgb(75, 53, 35);
+    opacity: 0;
+    z-index: -2;
+    animation-name: exiting;
+    animation-duration: 8s;
+    animation-delay: 16s;
+}
+
+@keyframes exiting{
+    0% {top: 150px; opacity: 1}
+    50% {top: 250px; opacity: 1}
+    100% {top: 1000px; opacity: 1}
+}
+
+@keyframes empty {
+    0% {
+        top: 250px;
+        height: 0px;
+    }
+    40% {
+        top: 150px;
+        height: 103px;
+    }
+    80% {
+        top: 150px;
+        height: 103px;
+    }
+    100% {
+        top: 250px;
+        height: 0px;
+    }
+}
